@@ -26,7 +26,8 @@ jobs:
       - name: Compile and Build Binary
         run: |
           mkdir -p build_output
-          arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 --output-dir ./build_output desk_dashboard.ino
+                    arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 --output-dir ./build_output *.ino
+
 
       - name: Upload Finished Machine Binary
         uses: actions/upload-artifact@v4
